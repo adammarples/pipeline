@@ -1,0 +1,14 @@
+pipeline:
+  outputs:
+    dev:
+      dataset: warehouse
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      keyfile: ~/.secrets/dbt-pipeline-key.json
+      location: EU
+      method: service-account
+      priority: interactive
+      project: pipeline-374517
+      threads: 4
+      type: bigquery
+  target: dev

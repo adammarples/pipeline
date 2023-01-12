@@ -1,0 +1,7 @@
+.idea
+logs
+.env
+.envrc
+.tool-versions
+__pycache__
+*.pyc
