@@ -58,7 +58,7 @@ def _generate_campaigns():
         for i in range(n):
             campaign_name = fake.company()
             # campaigns start today
-            campaign_start_date = dt
+            campaign_start_date = dt.date()
             campaign_duration = random.choice((30, 60, 90, 120))
             campaign_end_date = fake.date_between(
                 start_date=campaign_start_date,
@@ -140,11 +140,14 @@ def _generate_events_for_dt(devices, allowed_campaigns, dt):
 
 
 if __name__ == '__main__':
-    campaign_dir = Path(__file__).parent.joinpath('raw/campaigns')
+    raw_dir = Path(__file__).parent.joinpath('raw')
+    raw_dir.unlink(missing_ok=True)
+    raw_dir.mkdir(exist_ok=True)
+    campaign_dir = raw_dir / 'campaigns'
     campaign_dir.mkdir(parents=True, exist_ok=True)
-    events_dir = Path(__file__).parent.joinpath('raw/events')
+    events_dir = raw_dir / 'events'
     events_dir.mkdir(parents=True, exist_ok=True)
-    devices_dir = Path(__file__).parent.joinpath('raw/devices')
+    devices_dir = raw_dir / 'devices'
     devices_dir.mkdir(parents=True, exist_ok=True)
     campaigns = generate_campaigns()
     devices = generate_devices()
