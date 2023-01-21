@@ -13,7 +13,7 @@ Dbt:
 - [x] add dbt-vault to packages
 - [x] cd pipeline and install with dbt deps
 - [ ] ci/cd with github actions
-- [ ] pre-commit black, isort
+- [x] pre-commit black, isort
 - [ ] data gen
 
 
