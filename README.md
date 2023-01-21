@@ -16,16 +16,23 @@ Dbt:
 - [ ] pre-commit black, isort
 - [ ] data gen
 
+
 Terraform:
+
+https://gmusumeci.medium.com/how-to-create-a-service-account-for-terraform-in-gcp-google-cloud-platform-f75a0cf918d1
+
 - [x] mkdir infra
 - [x] gcloud config set project pipeline-374517
 - [x] gcloud iam service-accounts create terraform
-- [ ] grant editor role using gcloud
+- [x] grant editor role using gcloud
+- [x] enable Identity and Access Management (IAM) API
+- [x] enable Cloud Resource Manager API
+- [x] enable Cloud Billing API
 - [x] asdf install terraform
-- [ ] airflow service account
+- [x] airflow service account
 - [ ] admin service account
 - [ ] composer
-- [ ] staging dataset
+- [x] staging dataset
 - [ ] curated dataset
 - [ ] staging bucket - bq external tables? Files?
 
