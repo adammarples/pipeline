@@ -21,7 +21,7 @@ Terraform:
 - [x] gcloud config set project pipeline-374517
 - [x] gcloud iam service-accounts create terraform
 - [ ] grant editor role using gcloud
-- [ ] install terraform
+- [x] asdf install terraform
 - [ ] airflow service account
 - [ ] admin service account
 - [ ] composer
