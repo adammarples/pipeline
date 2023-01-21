@@ -7,9 +7,10 @@ CREDS=/Users/adammarples/.secrets/$EMAIL.json
 
 gcloud config set project $PROJECT
 gcloud iam service-accounts create $SA
-gcloud iam service-accounts add-iam-policy-binding $EMAIL --role=roles/editor --member='allAuthenticatedUsers'
-gcloud iam service-accounts add-iam-policy-binding $EMAIL --role=roles/iam.serviceAccountAdmin --member='allAuthenticatedUsers'
+gcloud projects add-iam-policy-binding $PROJECT --member serviceAccount:$EMAIL --role roles/editor
 gcloud iam service-accounts keys create $CREDS --iam-account=$EMAIL
 
+
+
 cd .. && terraform init && terraform plan
-echo "run terraform apply if happy"
+echo "run terraform apply [-auto-approve] if happy"
