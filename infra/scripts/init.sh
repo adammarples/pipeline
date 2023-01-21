@@ -7,3 +7,5 @@ gcloud config set project $PROJECT
 gcloud iam service-accounts create $SA
 gcloud iam service-accounts add-iam-policy-binding $SA@$PROJECT.iam.gserviceaccount.com \
   --role=roles/editor --member='allAuthenticatedUsers'
+
+cd infra && terraform init
