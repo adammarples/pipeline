@@ -36,3 +36,9 @@ Data:
 ## Issues
 - [ ] don't want profiles in source due to passwords?
 - [ ] uninstall incorrectly added packages with dbt deps?
+
+
+* Data dir contains package for genersting data
+* Infra dir is for terraform
+* Pipeline dir contains dbt project
+
