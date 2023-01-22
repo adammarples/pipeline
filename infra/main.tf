@@ -13,7 +13,10 @@ resource "google_project_iam_custom_role" "orchestrator_role" {
   role_id     = "orchestrator"
   title       = "Orchestrator Role"
   description = "To be used by airflow/dbt to manage the database"
-  permissions = ["bigquery.jobs.create"]
+  permissions = [
+    "bigquery.jobs.create",
+    "bigquery.datasets.create",
+  ]
 }
 
 resource "google_bigquery_dataset" "staging_dataset" {
