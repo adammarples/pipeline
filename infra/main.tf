@@ -1,6 +1,6 @@
-resource "google_service_account" "airflow" {
-  account_id   = "airflow"
-  display_name = "Airflow"
+resource "google_service_account" "orchestrator" {
+  account_id   = "orchestrator"
+  display_name = "Orchestrator"
 }
 
 resource "google_bigquery_dataset" "staging_dataset" {
@@ -16,8 +16,10 @@ resource "google_bigquery_dataset" "staging_dataset" {
 
   access {
     role          = "OWNER"
-    user_by_email = google_service_account.airflow.email
+    user_by_email = google_service_account.orchestrator.email
   }
+
+}
 
 }
 
@@ -34,7 +36,7 @@ resource "google_bigquery_dataset" "vault_dataset" {
 
   access {
     role          = "OWNER"
-    user_by_email = google_service_account.airflow.email
+    user_by_email = google_service_account.orchestrator.email
   }
 
 }
