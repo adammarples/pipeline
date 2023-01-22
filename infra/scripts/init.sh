@@ -7,8 +7,7 @@ CREDS=/Users/adammarples/.secrets/$EMAIL.json
 
 gcloud config set project $PROJECT
 gcloud iam service-accounts create $SA
-gcloud projects add-iam-policy-binding $PROJECT --member serviceAccount:$EMAIL --role roles/editor
-gcloud projects add-iam-policy-binding $PROJECT --member serviceAccount:$EMAIL --role roles/bigquery.admin
+gcloud projects add-iam-policy-binding $PROJECT --member serviceAccount:$EMAIL --role roles/owner
 gcloud iam service-accounts keys create $CREDS --iam-account=$EMAIL
 
 

@@ -29,12 +29,13 @@ ref https://gmusumeci.medium.com/how-to-create-a-service-account-for-terraform-i
 - [x] mkdir infra
 - [x] gcloud config set project pipeline-374517
 - [x] gcloud iam service-accounts create terraform
-- [x] grant editor role using gcloud
+- [x] grant owner role using gcloud
 - [x] enable Identity and Access Management (IAM) API
 - [x] enable Cloud Resource Manager API
 - [x] enable Cloud Billing API
 - [x] asdf install terraform
-- [x] airflow service account
+- [x] airflow service account and fetch key (gcloud iam service-accounts keys create $CREDS --iam-account=$EMAIL)
+- [x] create a role for orchestrator/dbt and fill it with bq permissions
 - [ ] admin service account
 - [ ] composer
 - [x] staging dataset
