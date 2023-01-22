@@ -1,10 +1,10 @@
 pipeline:
   outputs:
     dev:
-      dataset: warehouse
+      dataset: raw
       job_execution_timeout_seconds: 300
       job_retries: 1
-      keyfile: ~/.secrets/dbt-pipeline-key.json
+      keyfile: /Users/adammarples/.secrets/orchestrator@pipeline-374517.iam.gserviceaccount.com.json
       location: EU
       method: service-account
       priority: interactive
