@@ -20,3 +20,22 @@ resource "google_bigquery_dataset" "dataset" {
   }
 
 }
+
+resource "google_bigquery_dataset" "dataset" {
+  dataset_id                  = "vault"
+  friendly_name               = "vault"
+  description                 = "Curated dataset for vault data"
+  location                    = "EU"
+  default_table_expiration_ms = 3600000
+
+  labels = {
+    env = "default"
+  }
+
+  access {
+    role          = "OWNER"
+    user_by_email = google_service_account.airflow.email
+  }
+
+}
+
