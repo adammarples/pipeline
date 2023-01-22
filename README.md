@@ -13,6 +13,8 @@ Dbt:
 - [x] add packages.yaml to pipeline dir
 - [x] add dbt-vault to packages
 - [x] cd pipeline and install with dbt deps
+- [ ] triggers on write...?
+- [ ] script to drop data
 
 Other:
 - [x] pre-commit black, isort
@@ -48,7 +50,7 @@ Data:
 - [ ] uninstall incorrectly added packages with dbt deps?
 
 
-* Data dir contains package for genersting data
+* Data dir contains package for generating data
 * Infra dir is for terraform
 * Pipeline dir contains dbt project
 
