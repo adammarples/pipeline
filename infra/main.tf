@@ -55,11 +55,6 @@ resource "google_bigquery_dataset" "staging_dataset" {
 
 }
 
-moved {
-  from = google_bigquery_dataset.dataset
-  to = google_bigquery_dataset.staging_dataset
-}
-
 resource "google_bigquery_dataset" "vault_dataset" {
   dataset_id                  = "vault"
   friendly_name               = "vault"
