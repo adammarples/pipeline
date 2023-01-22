@@ -3,7 +3,7 @@ resource "google_service_account" "airflow" {
   display_name = "Airflow"
 }
 
-resource "google_bigquery_dataset" "dataset" {
+resource "google_bigquery_dataset" "staging_dataset" {
   dataset_id                  = "staging"
   friendly_name               = "staging"
   description                 = "Staging dataset for raw data"
@@ -21,7 +21,7 @@ resource "google_bigquery_dataset" "dataset" {
 
 }
 
-resource "google_bigquery_dataset" "dataset" {
+resource "google_bigquery_dataset" "vault_dataset" {
   dataset_id                  = "vault"
   friendly_name               = "vault"
   description                 = "Curated dataset for vault data"
