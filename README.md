@@ -1,4 +1,5 @@
 ### Setup Project
+Python and Git:
 - [x] create README.md
 - [x] put python 3.10 and direnv into .tool-versions
 - [x] create .envrc with use asdf
@@ -12,11 +13,11 @@ Dbt:
 - [x] add packages.yaml to pipeline dir
 - [x] add dbt-vault to packages
 - [x] cd pipeline and install with dbt deps
-- [x] pre-commit black, isort
-- [ ] data gen
 
 Other:
+- [x] pre-commit black, isort
 - [ ] ci/cd with github actions
+- [ ] data gen
 
 
 Terraform:
