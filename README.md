@@ -12,14 +12,16 @@ Dbt:
 - [x] add packages.yaml to pipeline dir
 - [x] add dbt-vault to packages
 - [x] cd pipeline and install with dbt deps
-- [ ] ci/cd with github actions
 - [x] pre-commit black, isort
 - [ ] data gen
+
+Other:
+- [ ] ci/cd with github actions
 
 
 Terraform:
 
-https://gmusumeci.medium.com/how-to-create-a-service-account-for-terraform-in-gcp-google-cloud-platform-f75a0cf918d1
+ref https://gmusumeci.medium.com/how-to-create-a-service-account-for-terraform-in-gcp-google-cloud-platform-f75a0cf918d1
 
 - [x] mkdir infra
 - [x] gcloud config set project pipeline-374517
