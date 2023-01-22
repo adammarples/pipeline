@@ -5,3 +5,5 @@ logs
 .tool-versions
 __pycache__
 *.pyc
+
+terraform.tfstate.*
