@@ -6,4 +6,5 @@ logs
 __pycache__
 *.pyc
 
-terraform.tfstate*
+terraform.tfstate
+terraform.tfstate.backup
