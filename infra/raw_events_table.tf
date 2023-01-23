@@ -29,7 +29,7 @@ resource "google_bigquery_table" "default" {
     "description": ""
   },{
     "name": "event_date",
-    "type": "STRING",
+    "type": "DATE",
     "mode": "NULLABLE",
     "description": ""
   },{
