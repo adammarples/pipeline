@@ -12,10 +12,6 @@ resource "google_bigquery_table" "raw_campaigns" {
     ]
   }
 
-  time_partitioning {
-    type = "DAY"
-  }
-
   labels = {
     env = "default"
   }
