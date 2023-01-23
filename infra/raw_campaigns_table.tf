@@ -25,22 +25,22 @@ resource "google_bigquery_table" "default" {
   {
     "name": "campaign_id",
     "type": "STRING",
-    "mode": "NULLABLE",
+    "mode": "REQUIRED",
     "description": ""
   },{
     "name": "campaign_name",
     "type": "STRING",
-    "mode": "NULLABLE",
+    "mode": "REQUIRED",
     "description": ""
   },{
     "name": "campaign_start_date",
     "type": "DATE",
-    "mode": "NULLABLE",
+    "mode": "REQUIRED",
     "description": ""
   },{
     "name": "campaign_end_date",
     "type": "DATE",
-    "mode": "NULLABLE",
+    "mode": "REQUIRED",
     "description": ""
   },{
     "name": "campaign_duration",

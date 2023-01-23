@@ -21,12 +21,12 @@ resource "google_bigquery_table" "default" {
   {
     "name": "device_id",
     "type": "STRING",
-    "mode": "NULLABLE",
+    "mode": "REQUIRED",
     "description": ""
   },{
     "name": "device_type",
     "type": "STRING",
-    "mode": "NULLABLE",
+    "mode": "REQUIRED",
     "description": ""
   },{
     "name": "device_model",

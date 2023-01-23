@@ -25,27 +25,27 @@ resource "google_bigquery_table" "default" {
   {
     "name": "event_id",
     "type": "STRING",
-    "mode": "NULLABLE",
+    "mode": "REQUIRED",
     "description": ""
   },{
     "name": "event_date",
-    "type": "DATE",
-    "mode": "NULLABLE",
+    "type": "DATETIME",
+    "mode": "REQUIRED",
     "description": ""
   },{
     "name": "event_type",
     "type": "STRING",
-    "mode": "NULLABLE",
+    "mode": "REQUIRED",
     "description": ""
   },{
     "name": "campaign_id",
     "type": "STRING",
-    "mode": "NULLABLE",
+    "mode": "REQUIRED",
     "description": ""
   },{
     "name": "url",
     "type": "STRING",
-    "mode": "NULLABLE",
+    "mode": "REQUIRED",
     "description": ""
   },{
     "name": "device_id",
