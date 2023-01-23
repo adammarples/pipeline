@@ -1,4 +1,4 @@
-resource "google_bigquery_table" "default" {
+resource "google_bigquery_table" "raw_campaigns" {
   dataset_id = google_bigquery_dataset.raw_dataset.dataset_id
   table_id   = "campaigns"
 
