@@ -1,6 +1,6 @@
 resource "google_bigquery_table" "raw_devices" {
   dataset_id = google_bigquery_dataset.raw_dataset.dataset_id
-  table_id   = "devices"
+  table_id   = "raw_devices"
 
   external_data_configuration {
     autodetect    = false
