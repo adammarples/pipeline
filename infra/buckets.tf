@@ -3,3 +3,9 @@ resource "google_storage_bucket" "raw_bucket" {
   location      = "EU"
   force_destroy = true
 }
+
+resource "google_storage_bucket" "tf_state" {
+  name          = "${var.gcp_project}-tf-state"
+  location      = "EU"
+  force_destroy = false
+}
