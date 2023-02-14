@@ -5,7 +5,18 @@ resource "google_service_account" "orchestrator" {
 
 resource "google_project_iam_member" "orchestrator_role_binding" {
   project = var.gcp_project
-  role    = "roles/bigquery.admin"
+  role    = google_project_iam_custom_role.orchestrator_role.id
   member  = google_service_account.orchestrator.member
 }
 
+resource "google_project_iam_custom_role" "orchestrator_role" {
+  role_id     = "orchestrator"
+  title       = "Orchestrator Role"
+  description = "To be used by airflow/dbt to manage the database"
+  permissions = [
+    "bigquery.jobs.create",
+    "bigquery.datasets.create",
+    "storage.objects.list",
+    "storage.objects.get",
+  ]
+}
