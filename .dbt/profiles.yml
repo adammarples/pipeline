@@ -6,7 +6,7 @@ pipeline:
       dataset: staging
       location: EU
       project: pipeline-374517
-      keyfile: /Users/adammarples/.secrets/orchestrator@pipeline-374517.iam.gserviceaccount.com.json
+      keyfile: /Users/adammarples/.secrets/terraform@pipeline-374517.iam.gserviceaccount.com.json
       job_execution_timeout_seconds: 300
       job_retries: 1
       priority: interactive

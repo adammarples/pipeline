@@ -3,9 +3,15 @@ resource "google_service_account" "orchestrator" {
   display_name = "Orchestrator"
 }
 
-resource "google_project_iam_member" "orchestrator_binding" {
+resource "google_project_iam_member" "orchestrator_role_binding" {
   project = var.gcp_project
   role    = google_project_iam_custom_role.orchestrator_role.id
+  member  = google_service_account.orchestrator.member
+}
+
+resource "google_project_iam_member" "orchestrator_iam_token_creator_binding" {
+  project = var.gcp_project
+  role    = "roles/iam.serviceAccountTokenCreator"
   member  = google_service_account.orchestrator.member
 }
 
