@@ -9,8 +9,12 @@ derived_columns:
   EFFECTIVE_FROM: "event_date"
   EFFECTIVE_TO: "date('9999-12-31')"
 hashed_columns:
-  event_HK: "event_id"
-  event_HASHDIFF:
+  EVENT_HK: "event_id"
+  DEVICE_HK: "device_id"
+  CAMPAIGN_HK: "campaign_id"
+  EVENT_DEVICE_HK: ["event_id", "device_id"]
+  EVENT_CAMPAIGN_HK: ["event_id", "campaign_id"]
+  EVENT_HASHDIFF:
     is_hashdiff: true
     columns:
       - "event_id"

@@ -1,7 +1,7 @@
 {{ config(materialized='incremental')    }}
 
 {%- set source_model = "stg_campaigns"   -%}
-{%- set src_pk = "campaign_HK"          -%}
+{%- set src_pk = "CAMPAIGN_HK"          -%}
 {%- set src_nk = "campaign_id"          -%}
 {%- set src_ldts = "LOAD_DATETIME"      -%}
 {%- set src_source = "SOURCE"    -%}

@@ -1,7 +1,7 @@
 {{ config(materialized='incremental')    }}
 
 {%- set source_model = "stg_events"   -%}
-{%- set src_pk = "event_HK"          -%}
+{%- set src_pk = "EVENT_HK"          -%}
 {%- set src_nk = "event_id"          -%}
 {%- set src_ldts = "LOAD_DATETIME"      -%}
 {%- set src_source = "SOURCE"    -%}
