@@ -5,9 +5,10 @@ source_model:
   raw: "raw_events"
 derived_columns:
   SOURCE: "!1"
-  LOAD_DATETIME: "CURRENT_DATE"
+{#  LOAD_DATETIME: "CRM_DATA_INGESTION_TIME"#}
   EFFECTIVE_FROM: "event_date"
-  EFFECTIVE_TO: "date('9999-12-31')"
+  START_DATE: "event_date"
+  END_DATE: "TO_DATE('9999-12-31')"
 hashed_columns:
   events_HK: "event_id"
   events_HASHDIFF:

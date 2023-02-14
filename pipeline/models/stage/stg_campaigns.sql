@@ -5,9 +5,10 @@ source_model:
   raw: "raw_campaigns"
 derived_columns:
   SOURCE: "!1"
-  LOAD_DATETIME: "CURRENT_DATE"
+{#  LOAD_DATETIME: "CRM_DATA_INGESTION_TIME"#}
   EFFECTIVE_FROM: "CURRENT_DATE"
-  EFFECTIVE_TO: "date('9999-12-31')"
+  START_DATE: "CURRENT_DATE"
+  END_DATE: "TO_DATE('9999-12-31')"
 hashed_columns:
   campaigns_HK: "campaign_id"
   campaigns_HASHDIFF:
