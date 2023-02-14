@@ -5,9 +5,9 @@ source_model:
   raw: "raw_events"
 derived_columns:
   SOURCE: "!1"
-  LOAD_DATETIME: "CRM_DATA_INGESTION_TIME"
-  EFFECTIVE_FROM: "BOOKING_DATE"
-  START_DATE: "BOOKING_DATE"
+{#  LOAD_DATETIME: "CRM_DATA_INGESTION_TIME"#}
+  EFFECTIVE_FROM: "event_date"
+  START_DATE: "event_date"
   END_DATE: "TO_DATE('9999-12-31')"
 hashed_columns:
   events_HK: "event_id"

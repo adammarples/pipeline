@@ -5,9 +5,9 @@ source_model:
   raw: "raw_devices"
 derived_columns:
   SOURCE: "!1"
-  LOAD_DATETIME: "CRM_DATA_INGESTION_TIME"
-  EFFECTIVE_FROM: "BOOKING_DATE"
-  START_DATE: "BOOKING_DATE"
+{#  LOAD_DATETIME: "CRM_DATA_INGESTION_TIME"#}
+  EFFECTIVE_FROM: "CURRENT_DATE"
+  START_DATE: "CURRENT_DATE"
   END_DATE: "TO_DATE('9999-12-31')"
 hashed_columns:
   devices_HK: "device_id"
