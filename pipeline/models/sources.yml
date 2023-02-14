@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: raw
+    config:
+      enabled: true
+    tables:
+      - name: raw_events
+      - name: raw_devices
+      - name: raw_campaigns

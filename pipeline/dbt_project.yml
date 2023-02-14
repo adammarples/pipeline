@@ -28,28 +28,24 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   pipeline:
-    raw:
-      tags:
-        - raw
-      materialized: view
     stage:
       tags:
-        - stage
+        - staging
       enabled: true
       materialized: view
-    vault:
-      tags:
-        - vault
-      materialized: incremental
-      hubs:
-        tags:
-          - hub
-      links:
-        tags:
-          - link
-      sats:
-        tags:
-          - satellite
-      t_links:
-        tags:
-          - t_link
+#    vault:
+#      tags:
+#        - vault
+#      materialized: incremental
+#      hubs:
+#        tags:
+#          - hub
+#      links:
+#        tags:
+#          - link
+#      sats:
+#        tags:
+#          - satellite
+#      t_links:
+#        tags:
+#          - t_link
