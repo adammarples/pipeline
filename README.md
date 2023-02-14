@@ -18,8 +18,8 @@ Dbt:
 
 Other:
 - [x] pre-commit black, isort
+- [x] data gen
 - [ ] ci/cd with github actions
-- [ ] data gen
 
 
 Terraform:
@@ -39,8 +39,7 @@ ref https://gmusumeci.medium.com/how-to-create-a-service-account-for-terraform-i
 - [ ] admin service account
 - [ ] composer
 - [x] staging dataset
-- [ ] curated dataset
-- [ ] staging bucket - bq external tables? Files?
+- [x] staging bucket - bq external tables
 
 Data:
 - [x] generation script
@@ -49,7 +48,8 @@ Data:
 ## Issues
 - [ ] don't want profiles in source due to passwords?
 - [ ] uninstall incorrectly added packages with dbt deps?
-
+- [ ] external tables keep disappearing
+- [ ] can't use _FILE_NAME in dbt-vault stg tables
 
 * Data dir contains package for generating data
 * Infra dir is for terraform
