@@ -9,8 +9,8 @@ derived_columns:
   EFFECTIVE_FROM: "CURRENT_DATE"
   EFFECTIVE_TO: "date('9999-12-31')"
 hashed_columns:
-  devices_HK: "device_id"
-  devices_HASHDIFF:
+  device_HK: "device_id"
+  device_HASHDIFF:
     is_hashdiff: true
     columns:
       - "device_id"

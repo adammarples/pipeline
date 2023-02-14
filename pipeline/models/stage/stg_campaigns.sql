@@ -9,8 +9,8 @@ derived_columns:
   EFFECTIVE_FROM: "CURRENT_DATE"
   EFFECTIVE_TO: "date('9999-12-31')"
 hashed_columns:
-  campaigns_HK: "campaign_id"
-  campaigns_HASHDIFF:
+  campaign_HK: "campaign_id"
+  campaign_HASHDIFF:
     is_hashdiff: true
     columns:
         - "campaign_id"

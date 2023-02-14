@@ -9,8 +9,8 @@ derived_columns:
   EFFECTIVE_FROM: "event_date"
   EFFECTIVE_TO: "date('9999-12-31')"
 hashed_columns:
-  events_HK: "event_id"
-  events_HASHDIFF:
+  event_HK: "event_id"
+  event_HASHDIFF:
     is_hashdiff: true
     columns:
       - "event_id"
