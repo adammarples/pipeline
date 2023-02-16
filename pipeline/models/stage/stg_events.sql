@@ -4,10 +4,10 @@
 source_model:
   raw: "raw_events"
 derived_columns:
-  SOURCE: "!1"
-  LOAD_DATETIME: "CURRENT_DATE"
-  EFFECTIVE_FROM: "event_date"
+  SOURCE: FILE_NAME
+  EFFECTIVE_FROM: DATE(REGEXP_EXTRACT(FILE_NAME, ".*events_([0-9]{4}-[0-9]{2}-[0-9]{2}).csv"))
   EFFECTIVE_TO: "date('9999-12-31')"
+  LOAD_DATETIME: "CURRENT_DATE"
 hashed_columns:
   EVENT_HK: "event_id"
   DEVICE_HK: "device_id"

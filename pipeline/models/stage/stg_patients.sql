@@ -4,10 +4,11 @@
 source_model:
   raw: "raw_patients"
 derived_columns:
-  SOURCE: "!1"
+  SOURCE: FILE_NAME
+  EFFECTIVE_FROM: DATE(REGEXP_EXTRACT(FILE_NAME, ".*patients_([0-9]{4}-[0-9]{2}-[0-9]{2}).csv"))
+  START_DATE: DATE(REGEXP_EXTRACT(FILE_NAME, ".*patients_([0-9]{4}-[0-9]{2}-[0-9]{2}).csv"))
+  END_DATE: "date('9999-12-31')"
   LOAD_DATETIME: "CURRENT_DATE"
-  EFFECTIVE_FROM: "CURRENT_DATE"
-  EFFECTIVE_TO: "date('9999-12-31')"
 hashed_columns:
   PATIENT_HK: "patient_id"
   ADDRESS_HK: [

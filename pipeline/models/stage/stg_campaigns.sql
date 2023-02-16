@@ -4,10 +4,10 @@
 source_model:
   raw: "raw_campaigns"
 derived_columns:
-  SOURCE: "!1"
-  LOAD_DATETIME: "CURRENT_DATE"
-  EFFECTIVE_FROM: "CURRENT_DATE"
+  SOURCE: FILE_NAME
+  EFFECTIVE_FROM: DATE(REGEXP_EXTRACT(FILE_NAME, ".*campaigns_([0-9]{4}-[0-9]{2}-[0-9]{2}).csv"))
   EFFECTIVE_TO: "date('9999-12-31')"
+  LOAD_DATETIME: "CURRENT_DATE"
 hashed_columns:
   CAMPAIGN_HK: "campaign_id"
   CAMPAIGN_HASHDIFF:
