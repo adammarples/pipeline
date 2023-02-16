@@ -19,13 +19,13 @@ resource "google_bigquery_table" "raw_patients" {
   schema = <<EOF
 [
   {
-    "name": "id",
+    "name": "patient_id",
     "type": "STRING",
     "mode": "REQUIRED",
     "description": ""
   },{
     "name": "name",
-    "type": "DATETIME",
+    "type": "STRING",
     "mode": "REQUIRED",
     "description": ""
   },{
