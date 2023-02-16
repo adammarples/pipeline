@@ -8,3 +8,4 @@ sources:
       - name: raw_events
       - name: raw_devices
       - name: raw_campaigns
+      - name: raw_patients
