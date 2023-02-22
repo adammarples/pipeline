@@ -6,6 +6,35 @@ sources:
       enabled: true
     tables:
       - name: raw_events
+        columns:
+          - name: event_id
+            tests:
+              - unique
+              - not_null
       - name: raw_devices
+        columns:
+          - name: device_id
+            tests:
+              - unique
+              - not_null
+          - name: device_type
+            tests:
+            - accepted_values:
+                values: ['desktop', 'mobile', 'tablet']
+          - name: device_model
+            tests:
+            - accepted_values:
+                values: ['pc', 'mac', 'iphone', 'android', 'pixel', 'ipad']
+
       - name: raw_campaigns
+        columns:
+          - name: campaign_id
+            tests:
+              - unique
+              - not_null
       - name: raw_patients
+        columns:
+          - name: patient_id
+            tests:
+              - unique
+              - not_null
