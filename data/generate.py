@@ -64,7 +64,9 @@ def _generate_campaigns():
                 end_date=campaign_start_date + timedelta(campaign_duration),
             )
             yield {
-                "campaign_id": create_hash_id_from_name(campaign_name + str(i)),
+                "campaign_id": create_hash_id_from_name(
+                    campaign_name + str(i) + str(dt)
+                ),
                 "campaign_name": campaign_name,
                 "campaign_start_date": campaign_start_date,
                 "campaign_end_date": campaign_end_date,
