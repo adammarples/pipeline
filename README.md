@@ -20,6 +20,7 @@ Other:
 - [x] pre-commit black, isort
 - [x] data gen
 - [ ] ci/cd with github actions
+- [ ] add data compression
 
 
 Terraform:
