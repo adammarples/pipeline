@@ -48,7 +48,6 @@ Data:
 ## Issues
 - [ ] don't want profiles in source due to passwords?
 - [ ] uninstall incorrectly added packages with dbt deps?
-- [ ] external tables keep disappearing
 - [ ] can't use _FILE_NAME in dbt-vault stg tables
 
 * Data dir contains package for generating data

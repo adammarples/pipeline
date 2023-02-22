@@ -1,9 +1,8 @@
 resource "google_bigquery_dataset" "raw_dataset" {
-  dataset_id                  = "raw"
-  friendly_name               = "raw"
-  description                 = "Raw dataset for raw data"
-  location                    = "EU"
-  default_table_expiration_ms = 3600000
+  dataset_id    = "raw"
+  friendly_name = "raw"
+  description   = "Raw dataset for raw data"
+  location      = "EU"
 
   labels = {
     env = "default"
