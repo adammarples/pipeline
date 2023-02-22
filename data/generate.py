@@ -154,7 +154,7 @@ if __name__ == "__main__":
     devices_dir.mkdir(parents=True, exist_ok=True)
     campaigns = generate_campaigns()
     devices = generate_devices()
-    devices.write_csv(devices_dir / "devices.csv")
+    devices.write_csv(devices_dir / "devices.csv", has_header=False)
     dt = start
     while dt <= end:
         print(dt)

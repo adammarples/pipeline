@@ -15,6 +15,9 @@ dbt-test-sources:
 	dbt test --select source:* --profiles-dir=../.dbt
 
 refresh-raw:
+	cd data; \
+	. .env/bin/activate && \
+	python -m generate
 	-gsutil -m rm gs://${PROJECT}-raw/**
 	gsutil -m cp ./data/raw/**/*.csv  gs://${PROJECT}-raw/
 
