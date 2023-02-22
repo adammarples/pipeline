@@ -6,5 +6,9 @@ dbt-run:
 	cd pipeline && \
 	dbt run --profiles-dir=../.dbt
 
+dbt-build:
+	cd pipeline && \
+	dbt build --profiles-dir=../.dbt
+
 credentials-refresh:
 	gcloud iam service-accounts keys create /Users/adammarples/.secrets/orchestrator@pipeline-374517.iam.gserviceaccount.com.json --iam-account=orchestrator@pipeline-374517.iam.gserviceaccount.com.json
