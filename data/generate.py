@@ -142,7 +142,7 @@ def _generate_events_for_dt(devices, allowed_campaigns, dt):
 
 if __name__ == "__main__":
     raw_dir = Path(__file__).parent.joinpath("raw")
-    raw_dir.unlink(missing_ok=True)
+    # raw_dir.unlink(missing_ok=True)
     raw_dir.mkdir(exist_ok=True)
     campaign_dir = raw_dir / "campaigns"
     campaign_dir.mkdir(parents=True, exist_ok=True)
