@@ -14,7 +14,7 @@ Dbt:
 - [x] add dbt-vault to packages
 - [x] cd pipeline and install with dbt deps
 - [ ] triggers on write...?
-- [ ] script to drop data
+- [x] script to drop data
 
 Other:
 - [x] pre-commit black, isort
