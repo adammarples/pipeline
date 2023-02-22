@@ -14,8 +14,9 @@ dbt-test-sources:
 	cd pipeline && \
 	dbt test --select source:* --profiles-dir=../.dbt
 
-copy-raw:
+refresh-raw:
 	cd data && \
+	gsutil -m rm gs://pipeline-374517-raw/**
 	gsutil -m cp ./data/raw/**/*.csv  gs://pipeline-374517-raw/
 
 credentials-refresh:
