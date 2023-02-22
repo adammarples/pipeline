@@ -3,7 +3,7 @@
 PROJECT=$1  # pipeline-374517
 SA=terraform
 EMAIL=$SA@$PROJECT.iam.gserviceaccount.com
-CREDS=/Users/adammarples/.secrets/$EMAIL.json
+CREDS=$SECRETS/$EMAIL.json
 
 gcloud config set project $PROJECT
 gcloud iam service-accounts create $SA
