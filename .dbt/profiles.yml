@@ -5,8 +5,8 @@ pipeline_profile:
       method: service-account
       dataset: staging
       location: EU
-      project: $PROJECT
-      keyfile: $SECRETS/orchestrator@$PROJECT.iam.gserviceaccount.com.json
+      project: "{{ env_var('PROJECT') }}"
+      keyfile: "{{ env_var('SECRETS') }}/orchestrator@{{ env_var('PROJECT') }}.iam.gserviceaccount.com.json"
       job_execution_timeout_seconds: 300
       job_retries: 1
       priority: interactive
